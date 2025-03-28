@@ -6,7 +6,7 @@
     $user       = "postgres";
     $password   = "unicesmag";
 
-    $conn = "  
+    $data_connection = "  
         host = $host
         port = $port
         dbname = $dbname
@@ -18,6 +18,11 @@
     $conn = pg_connect($data_connection);
 
     if(!$conn){
-        echo "Conection error"
+        echo "Conection error";
+    }else {
+        echo "seccess !!!";
+
     }
+     
+    pg_close($conn);
 ?>
