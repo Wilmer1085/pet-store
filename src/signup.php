@@ -1,5 +1,5 @@
 <?php
-    include ('config>database.php');
+   include ('config/database.php');
     $fname= $_POST['f_name'];
     $lname= $_POST['l_name'];
     $email= $_POST['e_mail'];
@@ -15,7 +15,7 @@
         status = true
     
     ";
-    $ans = pg_query($con, $sql_validate_email);
+    $ans = pg_query($conn, $sql_validate_email);
 
     if($ans){
     $row = pg_fetch_assoc($ans);
